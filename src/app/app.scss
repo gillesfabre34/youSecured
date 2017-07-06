@@ -1,16 +1,185 @@
-// http://ionicframework.com/docs/v2/theming/
+$darkPrimaryColor:   #D32F2F;
+$primaryColor:       #F44336;
+$lightPrimaryColor:  #FFCDD2;
+$textPrimaryColor:   #FFFFFF;
+$accentColor:        #4CAF50;
+$primaryTextColor:   #212121;
+$secondaryTextColor: #757575;
+$dividerColor:       #BDBDBD;
+$lightGrey:#E6E6E6;
+$dark:#000000;
+
+.backgroundPrimaryColor {
+  background-color: $primaryColor;
+}
+.backgroundSecondaryText {
+  background-color: $lightGrey;
+}
+.colorSecondaryText {
+  color: $secondaryTextColor !important;
+}
+.backgroundWhite {
+  background-color: #FFFFFF !important;
+}
+.dark {
+  color: $dark;
+}
+html, body {
+  height: 100%;
+}
+nav, .nav-wrapper {
+  height: 9%;
+  background-color: $primaryColor !important;
+}
+#divCenterPage {
+  background-color: #FFFFFF;
+  padding-top: 50px;
+}
+#divCenterPage p {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+footer {
+  height: 11%;
+  padding-top: 10px;
+}
+footer a {
+  color: $textPrimaryColor;
+}
+nav img {
+  margin-top: 3px;
+}
+nav, .nav-wrapper {
+  background-color: $darkPrimaryColor;
+}
+a.btn, a.btn:hover {
+  width: 100%;
+  background-color: $accentColor;
+}
+h1 {
+  font-size: 35px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.margin {
+  margin: 25px 15px !important;
+}
+.paddingLeft {
+  padding-left: 25px !important;
+}
+label {
+  text-align: left !important;
+}
+.input-field {
+  margin-top: 0 !important;
+}
+.row {
+  margin-bottom: 0px;
+}
 
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+/*---------------------------- Menu ------------------------- */
+
+#ulDropdownMenu {
+  display: inline-block !important;
+}
+#dropdown1 {
+  background-color: $primaryColor;
+  margin-top: 16%;
+  width: 50% !important;
+  left: auto !important;
+  right: -6% !important;
+}
+#dropdown1 li a {
+  color: #FFFFFF !important;
+}
+
+
+/*---------------------------- CSS Home ------------------------- */
+
+
+#bigSafeButton,
+#bigHelpButton {
+  width: 300px;
+  height: 300px;
+}
+#divLabelBigButton,
+#divAlertButton,
+#divInitializeApp,
+#bigSafeButton,
+.labelExplainSafeButton {
+  display: none;
+}
+#divAppelsUrgence label {
+  color: #FFFFFF;
+  display: inherit;
+}
+#divLabelBigButton {
+  height: 20%;
+}
+#divLabelBigButton p {
+  margin-top: 0px !important;
+}
+#divAlertButton {
+  height: 60%;
+}
+#pFirstLineDivInitializeApp {
+  position: relative;
+  margin-top: 50px;
+}
+#aGoToContactsPage {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+#divCenterPage {
+  height: 80%;
+}
+footer label {
+  text-align: center !important;
+}
+
+
+/*---------------------------- CSS Profile ------------------------- */
+
+#divProfile p {
+  text-align: left;
+}
+#divMainPageProfile {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+#divMainPageProfile p {
+  margin-bottom: 10px !important;
+  margin-top: 10px !important;
+}
+#divMainPageProfile {
+  background-color: #FFFFFF;
+}
+
+
+/*---------------------------- CSS contacts ------------------------- */
+
+
+#divButtonAddContact {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  width:90%;
+}
+#pContactAjoute {
+  display: none;
+}
+.divContact {
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  text-align: center;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+.btnChooseTel {
+  padding: 0px !important;
+  margin-bottom:10px !important;
+}
