@@ -1,11 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular';
+import { Nav, NavController, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { ContactsPage } from "../pages/contacts/contacts";
 import { VitalInformationsPage } from "../pages/vital-informations/vital-informations";
+import { HomePage } from "../pages/home/home";
 
 @Component({
 	templateUrl: 'app.html'
@@ -13,13 +14,13 @@ import { VitalInformationsPage } from "../pages/vital-informations/vital-informa
 export class MyApp {
 	rootPage:any = TabsPage;
 	homePage: TabsPage;
-	@ViewChild('nav') nav: NavController;
-	contactsPage: TabsPage;
-	vitalInformationsPage: TabsPage;
+	@ViewChild(Nav) nav: Nav;
+	contactsPage: any;
+	vitalInformationsPage: any;
 	
 	constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-		// this.contactsPage = ContactsPage;
-		// this.vitalInformationsPage = VitalInformationsPage;
+		this.contactsPage = ContactsPage;
+		this.vitalInformationsPage = VitalInformationsPage;
 		
 		platform.ready().then(() => {
 			// Okay, so the platform is ready and our plugins are available.
@@ -29,11 +30,14 @@ export class MyApp {
 		});
 	}
 	
-	ngOnInit() {
-		// this.nav.push(ContactsPage);
-	}
+/*	ngOnInit() {
+		this.nav.push(HomePage);
+		this.nav.push(ContactsPage);
+		this.nav.push(VitalInformationsPage);
+	}*/
 	
 	openPage(page){
+		this.nav.push(page);
 		this.rootPage = page;
 	}
 }
