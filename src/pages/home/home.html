@@ -12,7 +12,7 @@
 
 <ion-content padding>
 	<h2>Welcome to YouSecured!</h2>
-	<p>Choose contacts which will be alerted when you'll need help.</p>
+	<p>Choose contacts which will be alerted when you need help.</p>
 	<button ion-button icon-start color="secondary" block>
 		<ion-icon name="contact"></ion-icon>
 		Add contact
@@ -20,30 +20,24 @@
 	<ion-grid>
 		<ion-row>
 			<ion-col col-12>
-				Click on Help button to send alert SMS with your GPS position to contacts you have selected
+				Click on Help button to send alert SMS with your GPS position and turn on the video camera.
 			</ion-col>
 		</ion-row>
 		<ion-row>
 			<ion-col col-12>
-				Click on Help button to send alert SMS with your GPS position
+				Send "I'm OK" message and turn off the video camera when you'll be in security.
 			</ion-col>
 		</ion-row>
-		<div class="center-align backgroundWhite" id="divInitializeApp">
-			<p id="pFirstLineDivInitializeApp" class="dark">This app will send alert SMS with your GPS position</p>
-			<p id="pSecondLineDivInitializeApp" class="dark">to contacts you'll have selected.</p>
-			<a class="waves-effect waves-light btn" id="aGoToContactsPage" href="contacts.html">Choose contacts</a>
-		</div>
-		<div class="center-align backgroundWhite" id="divLabelBigButton">
-			<p class="labelExplainHelpButton dark">Send emergency message with your current location</p>
-			<p class="labelExplainHelpButton dark">and turn on the video camera</p>
-			<h4 id="titleAlertSent" class="labelExplainSafeButton dark"></h4>
-			<p class="labelExplainSafeButton dark">Send "I'm OK" message and turn off the video camera</p>
-			<p class="labelExplainSafeButton dark">when you'll be in security.</p>
-		</div>
-		<div class="center-align backgroundWhite" id="divAlertButton">
-			<img src="../../assets/img/help-push-button-120x120.png" alt="help button" class="brand-logo" id="bigHelpButton">
-			<img src="../../assets/img/help-safe-button.png" alt="safe button" class="brand-logo" id="bigSafeButton">
-		</div>
+		<ion-row>
+			<ion-col col-12>
+				<img src="../../assets/img/help-push-button-120x120.png" alt="help button" class="brand-logo" id="bigHelpButton">
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-12>
+				<img src="../../assets/img/help-safe-button.png" alt="safe button" class="brand-logo" id="bigSafeButton">
+			</ion-col>
+		</ion-row>
 	</ion-grid>
 </ion-content>
 		
