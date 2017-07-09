@@ -1,15 +1,25 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <ion-title>Contacts</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-navbar>
+	<ion-navbar color="primary">
+		<ion-title>Contacts</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only menuToggle>
+				<ion-icon name="menu"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-zzz
+	<div padding>
+		<ion-list>
+			<ion-item *ngFor="let contact of contacts">
+				{{contact.email}}
+			</ion-item>
+		</ion-list>
+		<button ion-button icon-start color="secondary" block (click)="submitAddContact()">
+			<ion-icon name="contact"></ion-icon>
+			Add contact
+		</button>
+	</div>
 </ion-content>

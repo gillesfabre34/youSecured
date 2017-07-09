@@ -9,12 +9,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  */
 @IonicPage()
 @Component({
-  selector: 'page-contacts',
-  templateUrl: 'contacts.html',
+	selector: 'page-contacts',
+	templateUrl: 'contacts.html',
 })
 export class ContactsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
+	
+	contacts: any[];
+	
+	constructor(public navCtrl: NavController, public navParams: NavParams) {
+		this.contacts = [];
+		this.contacts.push({email:"myemail"});
+		console.log("%cconstructor","font-weight:bold;");
+		
+	}
+	
+	ngOnInit(){
+		console.log("oooook");
+	}
+	
+	submitAddContact() {
+	}
 }
