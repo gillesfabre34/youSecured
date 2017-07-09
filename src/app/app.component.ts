@@ -26,7 +26,7 @@ export class MyApp {
 		public splashScreen: SplashScreen) {
 		this.initializeApp();
 		this.pages = [
-			{title: 'YouSecured', component: HomePage},
+			// {title: 'YouSecured', component: HomePage},
 			{title: 'Contacts', component: ContactsPage},
 			{title: 'Vital informations', component: VitalInformationsPage},
 		];
