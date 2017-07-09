@@ -12,11 +12,28 @@
 
 <ion-content padding>
 	<h2>Welcome to YouSecured!</h2>
-	<p>Choose contacts which will be alerted when you need help.</p>
-	<button ion-button icon-start color="secondary" block>
-		<ion-icon name="contact"></ion-icon>
-		Add contact
-	</button>
+	<p>Configure your account</p>
+	<ion-list>
+		<ion-item>
+			<ion-input type="text" placeholder="Email"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-input type="text" placeholder="Password"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-input type="text" placeholder="Phone number"></ion-input>
+		</ion-item>
+	</ion-list>
+	<div padding>
+		<button ion-button color="secondary" block>Sign Up</button>
+	</div>
+	<div padding>
+		Choose contacts which will be alerted when you need help.
+		<button ion-button icon-start color="secondary" block>
+			<ion-icon name="contact"></ion-icon>
+			Add contact
+		</button>
+	</div>
 	<ion-grid>
 		<ion-row>
 			<ion-col col-12>
