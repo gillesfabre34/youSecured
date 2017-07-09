@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, NavController, Platform } from 'ionic-angular';
+import { MenuController, Nav, NavController, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -12,13 +12,14 @@ import { HomePage } from "../pages/home/home";
 	templateUrl: 'app.html'
 })
 export class MyApp {
-	rootPage:any = TabsPage;
+	rootPage:any = HomePage;
+	pages: Array<{title: string, component: any}>;
 	homePage: TabsPage;
-	@ViewChild(Nav) nav: Nav;
+	@ViewChild('nav') nav: NavController;
 	contactsPage: any;
 	vitalInformationsPage: any;
 	
-	constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+	constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private menu: MenuController) {
 		this.contactsPage = ContactsPage;
 		this.vitalInformationsPage = VitalInformationsPage;
 		
