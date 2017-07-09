@@ -29,6 +29,10 @@ export class MyApp {
 		});
 	}
 	
+	ngOnInit() {
+		// this.nav.push(ContactsPage);
+	}
+	
 	openPage(page){
 		this.rootPage = page;
 	}
