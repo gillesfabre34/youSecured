@@ -11,6 +11,20 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ContactsPage } from "../pages/contacts/contacts";
 import { VitalInformationsPage } from "../pages/vital-informations/vital-informations";
 
+import { HttpModule } from '@angular/http';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+import { FirebaseProvider } from './../providers/firebase/firebase';
+
+const firebaseConfig = {
+	apiKey: "AIzaSyAP2ki0fXy7RXJPKgKIIgCVjUqjWdcZ9-4",
+	authDomain: "yousecured-79ddb.firebaseapp.com",
+	databaseURL: "https://yousecured-79ddb.firebaseio.com",
+	projectId: "yousecured-79ddb",
+	storageBucket: "",
+	messagingSenderId: "1027212125707"
+};
+
 @NgModule({
 	declarations: [
 		MyApp,
@@ -35,7 +49,8 @@ import { VitalInformationsPage } from "../pages/vital-informations/vital-informa
 		StatusBar,
 		SplashScreen,
 		// NavController,
-		{provide: ErrorHandler, useClass: IonicErrorHandler}
+		{provide: ErrorHandler, useClass: IonicErrorHandler},
+    FirebaseProvider
 	]
 })
 export class AppModule {}
