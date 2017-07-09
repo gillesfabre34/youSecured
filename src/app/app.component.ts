@@ -12,22 +12,32 @@ import { HomePage } from "../pages/home/home";
 	templateUrl: 'app.html'
 })
 export class MyApp {
+	@ViewChild(Nav) nav: Nav;
 	rootPage:any = HomePage;
 	pages: Array<{title: string, component: any}>;
 	homePage: TabsPage;
-	@ViewChild('nav') nav: NavController;
 	contactsPage: any;
 	vitalInformationsPage: any;
 	
-	constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private menu: MenuController) {
-		this.contactsPage = ContactsPage;
-		this.vitalInformationsPage = VitalInformationsPage;
-		
-		platform.ready().then(() => {
+	constructor(
+		public platform: Platform,
+		public menu: MenuController,
+		public statusBar: StatusBar,
+		public splashScreen: SplashScreen) {
+		this.initializeApp();
+		this.pages = [
+			{title: 'YouSecured', component: HomePage},
+			{title: 'Contacts', component: ContactsPage},
+			{title: 'Vital informations', component: VitalInformationsPage},
+		];
+	}
+	
+	initializeApp() {
+		this.platform.ready().then(() => {
 			// Okay, so the platform is ready and our plugins are available.
 			// Here you can do any higher level native things you might need.
-			statusBar.styleDefault();
-			splashScreen.hide();
+			this.statusBar.styleDefault();
+			this.splashScreen.hide();
 		});
 	}
 	
@@ -38,7 +48,7 @@ export class MyApp {
 	}*/
 	
 	openPage(page){
-		this.nav.push(page);
-		this.rootPage = page;
+		this.menu.close();
+		this.nav.setRoot(page.component);
 	}
 }
