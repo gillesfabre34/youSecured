@@ -17,12 +17,12 @@ import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from './../providers/firebase/firebase';
 
 const firebaseConfig = {
-	apiKey: "AIzaSyAP2ki0fXy7RXJPKgKIIgCVjUqjWdcZ9-4",
+	apiKey: "AIzaSyCBBq3AGhQ2SY7IUyTdw5PCPSbWdUbYjAM",
 	authDomain: "yousecured-79ddb.firebaseapp.com",
 	databaseURL: "https://yousecured-79ddb.firebaseio.com",
 	projectId: "yousecured-79ddb",
 	storageBucket: "",
-	messagingSenderId: "1027212125707"
+	messagingSenderId: "463590261065"
 };
 
 @NgModule({
