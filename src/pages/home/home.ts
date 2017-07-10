@@ -10,7 +10,11 @@ import { User } from "../../assets/collections/user";
 })
 export class HomePage {
 	addedContact: boolean;
+	email: string;
+	password: string;
+	phoneNumber: string;
 	signup: boolean;
+	user: User;
 	users: FirebaseListObservable<User[]>;
 	
 	constructor(public fireBaseProvider: FirebaseProvider) {
@@ -22,7 +26,11 @@ export class HomePage {
 	
 	submitSignUp() {
 		this.signup = true;
-		this.fireBaseProvider.addUser("zzz");
+		this.user = new User();
+		this.user.email = this.email;
+		this.user.password = this.password;
+		this.user.phoneNumber = this.phoneNumber;
+		this.fireBaseProvider.addUser(this.user);
 	}
 	
 	submitAddContact() {

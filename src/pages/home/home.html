@@ -16,13 +16,13 @@
 		<p>Configure your account</p>
 		<ion-list>
 			<ion-item>
-				<ion-input type="text" placeholder="Email"></ion-input>
+				<ion-input type="text" placeholder="Email" [(ngModel)]="email"></ion-input>
 			</ion-item>
 			<ion-item>
-				<ion-input type="text" placeholder="Password"></ion-input>
+				<ion-input type="text" placeholder="Password" [(ngModel)]="password"></ion-input>
 			</ion-item>
 			<ion-item>
-				<ion-input type="text" placeholder="Phone number"></ion-input>
+				<ion-input type="text" placeholder="Phone number" [(ngModel)]="phoneNumber"></ion-input>
 			</ion-item>
 		</ion-list>
 		<button ion-button color="secondary" block (click)="submitSignUp()">Sign Up</button>

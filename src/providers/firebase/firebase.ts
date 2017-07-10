@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import 'rxjs/add/operator/map';
+import { User } from "../../assets/collections/user";
 
 /*
  Generated class for the FirebaseProvider provider.
@@ -20,8 +21,8 @@ export class FirebaseProvider {
 		return this.afd.list('/users/');
 	}
 	
-	addUser(name) {
-		this.afd.list('/users/').push({name: "aaa", email: "rrr"});
+	addUser(user: User) {
+		this.afd.list('/users/').push(user);
 	}
 	
 	removeUser(id) {
