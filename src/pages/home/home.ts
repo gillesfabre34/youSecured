@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FirebaseListObservable } from "angularfire2/database";
 import { FirebaseProvider } from "../../providers/firebase/firebase";
+import { User } from "../../assets/collections/user";
 
 @Component({
 	selector: 'page-home',
@@ -10,12 +11,13 @@ import { FirebaseProvider } from "../../providers/firebase/firebase";
 export class HomePage {
 	addedContact: boolean;
 	signup: boolean;
-	users: FirebaseListObservable<any[]>;
+	users: FirebaseListObservable<User[]>;
 	
 	constructor(public fireBaseProvider: FirebaseProvider) {
 		this.addedContact = false;
 		this.signup = false;
 		this.users = this.fireBaseProvider.getUsers();
+		console.log("%cHomePage constructor type of this.users","color: red; font-weight:bold;",this.users);
 	}
 	
 	submitSignUp() {
