@@ -12,6 +12,9 @@
 
 <ion-content padding>
 	<h2>Welcome to YouSecured!</h2>
+	<div> {{ (usr | async)?.uid }} </div>
+	<button (click)="login()">Login</button>
+	<button (click)="logout()">Logout</button>
 	<div padding *ngIf="!signup">
 		<p>Configure your account</p>
 		<ion-list>
