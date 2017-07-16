@@ -4,3 +4,19 @@ img {
 	margin: auto;
 	display: block;
 }
+.buttonLoginFB {
+	text-transform: none;
+	background-color: #4267B2;
+	height: 40px;
+}
+
+.buttonLoginFB .button-inner {
+	font-size: 16px;
+	font-family: Helvetica, Arial,sans-serif;
+	justify-content: flex-start;
+}
+
+.buttonLoginFB ion-icon {
+	font-size: 2em;
+	margin-left: -5px !important;
+}
