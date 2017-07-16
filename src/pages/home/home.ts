@@ -5,6 +5,7 @@ import { User } from "../../assets/collections/user";
 import { Observable } from "rxjs/Observable";
 import * as firebase from 'firebase/app';
 import { AngularFireAuth } from "angularfire2/auth";
+import { Facebook } from "../../app/facebook";
 
 @Component({
 	selector: 'page-home',
@@ -13,6 +14,7 @@ import { AngularFireAuth } from "angularfire2/auth";
 export class HomePage {
 	addedContact: boolean;
 	email: string;
+	facebook: Facebook;
 	password: string;
 	phoneNumber: string;
 	signup: boolean;
@@ -30,10 +32,21 @@ export class HomePage {
 		// console.log("%cHomePage constructor type of this.users","color: red; font-weight:bold;",this.users);
 	}
 	
-	login() {
-		this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+	ngOnInit() {
+		this.facebook = new Facebook('1387457551345169');
+		console.log("%cHomePage ngOnInit Facebook ","color: red; font-weight:bold;",this.facebook);
+		// this.login();
 	}
 	
+	login() {
+		console.log("%cHomePage login ","color: red; font-weight:bold;","");
+		this.facebook.login()
+	}
+	
+/*	login() {
+		this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+	}
+	*/
 	logout() {
 		this.afAuth.auth.signOut();
 	}
