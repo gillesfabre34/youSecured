@@ -15,10 +15,18 @@
 	<div> {{ (usr | async)?.uid }} </div>
 	<button (click)="login()">Login</button>
 	<button (click)="logout()">Logout</button>
-	<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"  (click)="login()"></div>
+	<!--<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"  (click)="login()"></div>-->
 	<!--<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>-->
 	<div padding *ngIf="!signup">
-		<button ion-button icon-left block text-left (click)="login()" class="buttonLoginFB"><ion-icon name="logo-facebook"></ion-icon>Se connecter avec Facebook</button>
+		<!--<button ion-button icon-left block text-left (click)="login()" class="buttonLoginFB"><ion-icon name="logo-facebook"></ion-icon><span>Se connecter avec Facebook</span></button>-->
+		<ion-grid class="buttonLoginFB" (click)="login()" >
+			<ion-row>
+				<ion-col col-1>
+					<ion-icon name="logo-facebook"></ion-icon>
+				</ion-col>
+				<ion-col col-11 text-center>Se connecter avec Facebook</ion-col>
+			</ion-row>
+		</ion-grid>
 		<p>Configure your account</p>
 		<ion-list>
 			<ion-item>
