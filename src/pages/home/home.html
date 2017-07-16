@@ -15,9 +15,10 @@
 	<div> {{ (usr | async)?.uid }} </div>
 	<button (click)="login()">Login</button>
 	<button (click)="logout()">Logout</button>
-	<button ion-button (click)="login()">Login FB</button>
 	<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+	<!--<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>-->
 	<div padding *ngIf="!signup">
+		<button ion-button icon-left block (click)="login()"><ion-icon name="logo-facebook"></ion-icon>Se connecter avec Facebook</button>
 		<p>Configure your account</p>
 		<ion-list>
 			<ion-item>
