@@ -40,7 +40,9 @@ export class HomePage {
 	
 	login() {
 		console.log("%cHomePage login ","color: red; font-weight:bold;","");
-		this.facebook.login()
+		this.facebook.login();
+		let credential = firebase.auth.FacebookAuthProvider.PROVIDER_ID;
+		console.log("%cHomePage login credential","color: red; font-weight:bold;",credential);
 	}
 	
 /*	login() {

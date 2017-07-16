@@ -17,17 +17,23 @@ export class Facebook {
 		this.init();
 	}
 	
-	login() {
-		FB.login(function(response) {
-			if (response.authResponse) {
-				console.log('Welcome!  Fetching your information.... ');
-				FB.api('/me', function(response) {
-					console.log('Hello, ' + response.name + ' !');
-				});
-			} else {
-				console.log('User cancelled login or did not fully authorize.');
-			}
-		});
+	login(): Promise<any> {
+		// return Promise.resolve(() => {
+			return FB.login(function (response) {
+				if (response.authResponse) {
+					console.log('Welcome!  Fetching your information.... ');
+					FB.api('/me', {fields: 'name,email'}, function (response) {
+						console.log("%cFacebook login response ", "color: blue; font-weight:bold;", response);
+						console.log('%cHello, ' + response.name + ' !', "color: blue; font-weight:bold;","");
+						console.log('%cemail : ' + response.email, "color: blue; font-weight:bold;","");
+						return response;
+					});
+				} else {
+					console.log('User cancelled login or did not fully authorize.');
+				}
+			},
+				{scope: 'public_profile,email'});
+		// });
 	}
 	
 	init() {
