@@ -37,8 +37,21 @@
         });
         FB.AppEvents.logPageView();
         FB.getLoginStatus(function(response) {
-            console.log("response : ",response);
-//            statusChangeCallback(response);
+            console.log("%cIndex fbAsyncInit response : ","font-weight: bold; color:blue;",response);
+            if(response.status === 'connected') {
+                console.log("%cCONNECTED ! ","font-weight: bold; color:green;",response);
+                let uid = response.authResponse.userID;
+                let accessToken = response.authResponse.accessToken;
+                console.log("%cuid ","font-weight: bold; color:green;",uid);
+                console.log("%caccessToken ","font-weight: bold; color:green;",accessToken);
+            } else if (response.status === 'not_authorized') {
+                console.log("%cLOGGED IN TO FB BUT NOT AUTHENTICATED APP ! ","font-weight: bold; color:orange;",response);
+                // the user is logged in to Facebook,
+                // but has not authenticated your app
+            } else {
+                console.log("%NOT LOGGED IN TO FB ! ","font-weight: bold; color:orange;",response);
+                // the user isn't logged in to Facebook.
+            }
         });
     };
 
