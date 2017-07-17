@@ -49,7 +49,7 @@ export class Facebook {
 					});
 				} else {
 					console.log("%NOT LOGGED IN TO FB ! ","font-weight: bold; color:orange;",response);
-					// the user isn't logged in to Facebook.
+					// the user isn't logged in to Facebook...
 				}
 				
 				console.log('Welcome!  Fetching your information.... ');
