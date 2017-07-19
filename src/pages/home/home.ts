@@ -38,6 +38,16 @@ export class HomePage {
 		// this.login();
 	}
 	
+	signInWithFacebook() {
+		this.afAuth.auth
+			.signInWithPopup(new firebase.auth.FacebookAuthProvider())
+			.then(res => console.log('res = ',res));
+	}
+	
+	signOut() {
+		this.afAuth.auth.signOut();
+	}
+	
 	login() {
 		console.log("%cHomePage login ","color: red; font-weight:bold;","");
 		this.facebook.login();
@@ -46,6 +56,7 @@ export class HomePage {
 	}
 	
 /*	login() {
+
 		this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
 	}
 	*/

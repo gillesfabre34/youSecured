@@ -15,7 +15,7 @@ import { HttpModule } from '@angular/http';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from './../providers/firebase/firebase';
-import { AngularFireAuth } from "angularfire2/auth";
+import { AngularFireAuth, AngularFireAuthModule } from "angularfire2/auth";
 
 const firebaseConfig = {
 	apiKey: "AIzaSyCBBq3AGhQ2SY7IUyTdw5PCPSbWdUbYjAM",
@@ -37,6 +37,7 @@ const firebaseConfig = {
 	imports: [
 		BrowserModule,
 		HttpModule,
+		AngularFireAuthModule,
 		AngularFireDatabaseModule,
 		AngularFireModule.initializeApp(firebaseConfig),
 		IonicModule.forRoot(MyApp)
