@@ -29,6 +29,7 @@ export class HomePage {
 		this.addedContact = false;
 		this.signup = false;
 		this.users = this.fireBaseProvider.getUsers();
+		
 		// console.log("%cHomePage constructor type of this.users","color: red; font-weight:bold;",this.users);
 	}
 	
