@@ -55,7 +55,7 @@ export class HomePage {
 		console.log("%cHomePage login credential","color: red; font-weight:bold;",credential);
 	}
 	
-/*	login() {
+	/*	login() {
 		this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
 	}
 	*/
