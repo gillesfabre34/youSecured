@@ -57,6 +57,7 @@ export class HomePage {
 	
 	/*	login() {
 		this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+		
 	}
 	*/
 
